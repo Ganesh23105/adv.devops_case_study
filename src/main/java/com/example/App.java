@@ -22,13 +22,16 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         logger.debug("Waiting for user input...");
         logger.info("Enter two numbers to divide:");
-
+    
         try {
+            logger.info("Requesting numerator input.");
             System.out.print("Enter numerator: ");
             int numerator = Integer.parseInt(scanner.nextLine());
+    
+            logger.info("Requesting denominator input.");
             System.out.print("Enter denominator: ");
             int denominator = Integer.parseInt(scanner.nextLine());
-
+    
             int result = divide(numerator, denominator);
             logger.info("Result of division: {}", result);
         } catch (NumberFormatException e) {
@@ -40,9 +43,6 @@ public class App {
             logger.debug("Scanner closed");
         }
     }
-
-    private static int divide(int numerator, int denominator) {
-        logger.info("Performing division: {}/{}", numerator, denominator);
-        return numerator / denominator; // May throw ArithmeticException
-    }
+    
 }
+
