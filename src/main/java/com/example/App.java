@@ -20,11 +20,11 @@ public class App {
 
         try {
             logger.info("Requesting numerator input.");
-            System.out.print("Enter numerator: ");
+            logger.info("Enter numerator: ");
             int numerator = Integer.parseInt(scanner.nextLine());
 
             logger.info("Requesting denominator input.");
-            System.out.print("Enter denominator: ");
+            logger.info("Enter denominator: ");
             int denominator = Integer.parseInt(scanner.nextLine());
 
             int result = divide(numerator, denominator);
